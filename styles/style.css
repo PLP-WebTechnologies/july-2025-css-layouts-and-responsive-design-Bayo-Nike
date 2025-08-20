@@ -1,0 +1,102 @@
+/* ========== Base Styles ========== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background: #f5f5f5;
+    color: #333;
+  }
+  
+  /* ========== Layout ========== */
+  .site-header, .site-footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+  }
+  
+  .site-nav {
+    background: #444;
+  }
+  
+  .site-nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    flex-wrap: wrap;
+  }
+  
+  .site-nav li {
+    margin: 0.5rem 1rem;
+  }
+  
+  .site-nav a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .grid-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  /* ========== Main Content ========== */
+  .main-content {
+    background: white;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* ========== Sidebar ========== */
+  .sidebar {
+    background: #e9e9e9;
+    padding: 1rem;
+  }
+  
+  /* ========== Footer ========== */
+  .site-footer {
+    margin-top: 2rem;
+  }
+  
+  /* ========== Media Queries ========== */
+  @media (max-width: 768px) {
+    .grid-container {
+      grid-template-columns: 1fr;
+    }
+  
+    .site-nav ul {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .site-nav li {
+      margin: 0.5rem 0;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .site-header h1 {
+      font-size: 1.5rem;
+    }
+  
+    .main-content, .sidebar {
+      padding: 0.5rem;
+    }
+  }
+  
+  /* ========== Comments / Organization ========== */
+  /*
+  - Flexbox used in .site-nav ul for nav layout
+  - CSS Grid used in .grid-container for main + sidebar layout
+  - Responsive breakpoints at 768px (tablet) and 480px (mobile)
+  - Clean modular structure with sections labeled
+  */
+  
